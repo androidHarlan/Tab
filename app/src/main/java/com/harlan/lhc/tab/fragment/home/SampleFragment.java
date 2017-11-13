@@ -1,15 +1,16 @@
 package com.harlan.lhc.tab.fragment.home;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.harlan.lhc.tab.R;
+import com.isanwenyu.lazyfragment.BaseLazyFragment;
 
 
-public class SampleFragment extends Fragment {
+public class SampleFragment extends BaseLazyFragment {
 
     private static final String ARG_POSITION = "position";
 
@@ -30,5 +31,41 @@ public class SampleFragment extends Fragment {
 
 
         return rootView;
+    }
+
+    @Override
+    public void onBeforeSetContentLayout() {
+
+    }
+
+    @Override
+    public void init(Bundle savedInstanceState) {
+
+    }
+
+    @Override
+    public void initView() {
+
+    }
+
+    @Override
+    public void initData() {
+
+    }
+
+    @Override
+    public int getLayoutId() {
+        return 0;
+    }
+
+    @Override
+    public void lazyData() {
+        Log.e("backinfo","lazyData");
+    }
+
+    @Override
+    public void onAutoRefresh() {
+        Log.e("backinfo","onAutoRefresh");
+        super.onAutoRefresh();
     }
 }

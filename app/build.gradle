@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.harlan.lhc.tab"
-        minSdkVersion 14
+        minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -23,5 +23,6 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:25.3.1'
-    compile files('libs/butterknife-7.0.1.jar')
+   // compile files('libs/butterknife-7.0.1.jar')
+    compile 'com.isanwenyu.lazyfragment:lazyfragment:1.0.0'
 }

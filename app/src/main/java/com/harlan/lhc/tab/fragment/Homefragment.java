@@ -12,16 +12,15 @@ import com.harlan.lhc.tab.R;
 import com.harlan.lhc.tab.tabhost.SlidingTabLayout;
 import com.harlan.lhc.tab.tabhost.ViewPagerAdapter;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
 
 
 public class Homefragment extends Fragment {
 
     View view;
-    @Bind(R.id.sliding_tabs)
+   // @Bind(R.id.sliding_tabs)
     SlidingTabLayout slidingTabs;
-    @Bind(R.id.viewpager)
+  //  @Bind(R.id.viewpager)
     ViewPager viewpager;
     private String[] titles = new String[]{"Sample Tab 1", "Sample Tab 2", "Sample Tab 3", "Sample Tab 4"
            };
@@ -29,7 +28,9 @@ public class Homefragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_homefragment, null);
-        ButterKnife.bind(this, view);
+        slidingTabs= (SlidingTabLayout) view.findViewById(R.id.sliding_tabs);
+        viewpager= (ViewPager) view.findViewById(R.id.viewpager);
+      //  ButterKnife.bind(this, view);
         viewpager.setAdapter(new ViewPagerAdapter(getFragmentManager(), titles));
         slidingTabs.setViewPager(viewpager);
 
